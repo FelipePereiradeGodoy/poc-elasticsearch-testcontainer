@@ -68,7 +68,7 @@ export class SearchService {
     indexName: string,
     documentId: string,
     document: any,
-    pipelineName: string,
+    pipelineName?: string,
   ): Promise<void> {
     await this.elasticsearchService.index({
       index: indexName,
