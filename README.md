@@ -1,5 +1,6 @@
-## POC Elasticsearch + NestJS
+## POC Elasticsearch + NestJS + TestContainers
 POC criada com foco em melhorar a busca de dados em log, utilizando a pipeline do elasticsearh para não ser necessário nenhuma refatoração nos logs já existente no sistema que irá enviar os dados para o elastic.
+Também foi realizado um estudo sobre a lib TestContainers para subir containers e facilitar os testes de integração e e2e.
 
 ## Instalação
 
