@@ -92,7 +92,7 @@ export class SearchService {
     console.log('Document By Id: ');
     console.log(document);
 
-    return;
+    return document;
   }
 
   async searchItemsByDateRange(
@@ -113,9 +113,9 @@ export class SearchService {
     });
 
     console.log('Items By Date Range: ');
-    console.log(documentInfo.hits.hits);
+    console.log(documentInfo);
 
-    return;
+    return documentInfo.hits.hits;
   }
 
   async searchItemsByItemId(indexName: string, itemId: number) {
@@ -129,9 +129,9 @@ export class SearchService {
     });
 
     console.log('Items By Id: ');
-    console.log(documentInfo.hits.hits);
+    console.log(documentInfo);
 
-    return;
+    return documentInfo.hits.hits;
   }
 
   async searchItemsByDescription(indexName: string, itemDescription: string) {
@@ -145,8 +145,8 @@ export class SearchService {
     });
 
     console.log('Items By Description: ');
-    console.log(documentInfo.hits.hits);
+    console.log(documentInfo);
 
-    return;
+    return documentInfo.hits.hits;
   }
 }

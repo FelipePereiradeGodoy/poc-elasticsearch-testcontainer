@@ -43,9 +43,9 @@ export default class SearchController {
     const indexName = payload.indexName;
     const documentId = payload.documentId;
 
-    await this.searchService.getDocumentById(indexName, documentId);
+    const response = await this.searchService.getDocumentById(indexName, documentId);
 
-    return;
+    return response;
   }
 
   @Post('search-item-by-date-range')
@@ -54,13 +54,13 @@ export default class SearchController {
     const initialDate = payload.initialDate;
     const finalDate = payload.finalDate;
 
-    await this.searchService.searchItemsByDateRange(
+    const response = await this.searchService.searchItemsByDateRange(
       indexName,
       initialDate,
       finalDate,
     );
 
-    return;
+    return response;
   }
 
   @Post('search-item-by-item-id')
@@ -68,9 +68,9 @@ export default class SearchController {
     const indexName = payload.indexName;
     const itemId = payload.itemId;
 
-    await this.searchService.searchItemsByItemId(indexName, itemId);
+    const response = await this.searchService.searchItemsByItemId(indexName, itemId);
 
-    return;
+    return response;
   }
 
   @Post('search-item-by-item-description')
@@ -78,11 +78,11 @@ export default class SearchController {
     const indexName = payload.indexName;
     const itemDescription = payload.itemDescription;
 
-    await this.searchService.searchItemsByDescription(
+    const response = await this.searchService.searchItemsByDescription(
       indexName,
       itemDescription,
     );
 
-    return;
+    return response;
   }
 }
